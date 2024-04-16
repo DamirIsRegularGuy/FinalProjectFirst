@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="148dp"
+    android:layout_height="124dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginEnd="8dp"
+    app:cardBackgroundColor="#F6F5FB"
+    android:layout_marginStart="28dp"
+    android:layout_marginTop="12dp"
+    app:cardCornerRadius="16dp"
+    android:id="@+id/cardif"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/foto1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/user__8__1"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"/>
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="108dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Astro- psychological report"
+            android:textColor="@color/title_text_color"
+            android:textSize="10dp"/>
+
+        <TextView
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Some short description of this type of report."
+            android:textSize="8dp" />
+
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/foto2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/vniz"
+        android:layout_marginStart="114dp"/>
+
+
+</androidx.cardview.widget.CardView>
