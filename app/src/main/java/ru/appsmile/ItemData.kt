@@ -1,6 +1,9 @@
 package ru.appsmile
 
+import androidx.annotation.DrawableRes
+import java.io.Serializable
+
 data class ItemData(
-    val number: Int,
-    val text: String
-)
+    @DrawableRes val icon: Int,
+    val strana: String
+) : Serializable

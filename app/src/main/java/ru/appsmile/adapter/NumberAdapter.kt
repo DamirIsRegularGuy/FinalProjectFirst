@@ -1,3 +1,4 @@
+/*
 package ru.appsmile.adapter
 
 import android.view.LayoutInflater
@@ -78,3 +79,5 @@ class NumberAdapter(private val numberList: List<ItemData>) :
         const val BLACK_VIEW_TYPE = 2
     }
 }
+
+ */

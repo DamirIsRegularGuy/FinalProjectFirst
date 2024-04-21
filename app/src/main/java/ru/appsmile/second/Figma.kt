@@ -6,7 +6,6 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
-import ru.appsmile.adapter.NumberAdapter
 import ru.appsmile.adapter.NumberAdapter1
 import ru.appsmile.adapter.Screen2
 import ru.appsmile.adapter.favorite

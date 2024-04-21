@@ -26,7 +26,7 @@
             android:name="ru.appsmile.second.NewActivity"
             android:exported="false" />
         <activity
-            android:name="ru.appsmile.second.Figma"
+            android:name="ru.appsmile.perevod.FirstSceenPerevod"
             android:exported="true">
 
             <intent-filter>
@@ -42,6 +42,10 @@
         <activity
             android:name=".MainActivity"
             android:exported="true" />
+        <activity android:name="ru.appsmile.second.Figma"
+            android:exported="true"/>
+        <activity android:name="ru.appsmile.perevod.SecondScreenPerevod"
+            android:exported="true"/>
     </application>
 
 </manifest>

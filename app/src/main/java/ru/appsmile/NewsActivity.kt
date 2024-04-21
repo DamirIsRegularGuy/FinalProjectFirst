@@ -1,3 +1,4 @@
+/*
 package ru.appsmile
 
 import android.os.Bundle
@@ -19,4 +20,4 @@ class NewsActivity : AppCompatActivity() {
         numberPanel?.layoutManager = StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL)
         numberPanel?.adapter = NumberAdapter((1..100).toList().map { ItemData(it, "text") })
     }
-}
+}*/
