@@ -28,7 +28,7 @@ class country(private val numberList: List<ItemData>) :
     }
 
     override fun getItemCount(): Int {
-        return 3
+        return (numberList.take(3)).size
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {

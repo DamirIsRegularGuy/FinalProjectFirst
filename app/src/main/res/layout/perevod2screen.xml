@@ -2,11 +2,14 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F5F5F5"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
         android:orientation="vertical">
 
      <RelativeLayout
@@ -34,7 +37,12 @@
             android:layout_marginStart="20dp"
             android:fontFamily="sans-serif-medium"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="12dp"/>
+            android:layout_marginTop="12dp">
+
+            <requestFocus/>
+
+        </TextView>
+
 
      </RelativeLayout>
 
@@ -47,6 +55,8 @@
 
             <androidx.appcompat.widget.SearchView
                 android:id="@+id/yooh"
+                app:elevation="0dp"
+                android:background="#767680"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:queryHint="Поиск страны"
@@ -61,6 +71,7 @@
             android:layout_width="match_parent"
             app:cardCornerRadius="16dp"
             android:layout_gravity="center"
+            app:cardElevation="0dp"
             android:layout_marginHorizontal="20dp"
             android:layout_height="wrap_content"
             android:layout_marginVertical="12dp">
