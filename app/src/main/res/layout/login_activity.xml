@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/exit_but"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Закрыть"
+                android:background="@null"
+                android:textColor="#EB8042"
+                android:layout_alignParentEnd="true"
+                app:elevation="0dp"
+                />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Номер телефона"
+            android:textSize="28dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="16dp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#333333"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Укажите номер вашего телефона, мы пришлем СМС для входа в приложение"
+            android:textSize="16dp"
+            android:layout_marginHorizontal="16dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textColor="#737373"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="32dp"
+            app:cardElevation="0dp"
+            android:layout_marginHorizontal="16dp"
+            app:cardCornerRadius="14dp">
+
+            <EditText
+                android:id="@+id/edit_text_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:paddingVertical="10dp"
+                android:inputType="number"
+                android:hint="Введите номер телефона"
+                android:textColor="@color/colornumber"
+                android:background="@null"
+                />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <CheckBox
+            android:id="@+id/check_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="32dp"
+            app:cardElevation="0dp"
+            style="@style/CheckboxStyle"
+            android:layout_marginHorizontal="16dp"
+            android:paddingStart="12dp"
+            android:textSize="14dp"
+            android:textColor="@color/colornumber"
+            android:text="@string/line"
+            />
+
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/continue_but"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Продолжить"
+                app:cornerRadius="50dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="32dp"
+                android:elevation="0dp"
+                app:backgroundTint="#E0E0E0"
+                android:textColor="#333333"
+                />
+
+
+
+    </LinearLayout>
+
+</ScrollView>

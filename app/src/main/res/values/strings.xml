@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">My First App</string>
+    <string name="line">Настоящим, я соглашаюсь и принимаю условия описанные в <u><b>Лицензионном соглашении, Публичной оферте и Политике конфиденциальности</b></u></string>
 </resources>

@@ -167,9 +167,43 @@
         </androidx.cardview.widget.CardView>
 
         <com.google.android.material.card.MaterialCardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:id="@+id/mat_card_exit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_gravity="center"
+            app:elevation="0dp"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="16dp"
+            android:layout_marginHorizontal="16dp">
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="12dp"
+                android:paddingStart="16dp">
+
+                <ImageView
+                    android:id="@+id/pic_exit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/left"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Выйти"
+                    android:textColor="#FF5555"
+                    android:textSize="16dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_toEndOf="@id/pic_exit"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="16dp"
+                    />
+
+            </RelativeLayout>
 
 
         </com.google.android.material.card.MaterialCardView>
