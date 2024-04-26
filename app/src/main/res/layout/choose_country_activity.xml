@@ -38,9 +38,6 @@
             android:fontFamily="sans-serif-medium"
             android:layout_alignParentStart="true"
             android:layout_marginTop="12dp">
-
-            <requestFocus/>
-
         </TextView>
 
 
@@ -56,10 +53,10 @@
             <androidx.appcompat.widget.SearchView
                 android:id="@+id/yooh"
                 app:elevation="0dp"
-                android:background="#767680"
+                android:background="@color/serchVIEW"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:queryHint="Поиск страны"
+                app:queryHint="Поиск страны"
                 app:iconifiedByDefault="false"
                 android:contextClickable="true"/>
 

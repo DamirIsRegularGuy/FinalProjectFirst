@@ -1,5 +1,6 @@
 package ru.appsmile.adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,9 +8,13 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.cardview.widget.CardView
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
+import final_mounth_project.Transfer_activity
 import ru.appsmile.ItemData
 import ru.appsmile.first.R
+import ru.appsmile.perevod.MainActivity
+import ru.appsmile.perevod.SecondScreenPerevod
 
 class country(private val numberList: List<ItemData>) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
@@ -38,13 +43,14 @@ class country(private val numberList: List<ItemData>) :
             holder.txt.text = numberList[position].strana
 
             holder.tos.setOnClickListener {
-                Toast.makeText(
-                    holder.itemView.context,
-                    holder.txt.text.toString(),
-                    Toast.LENGTH_SHORT
-                ).show()
+                val countries = holder.txt.text.toString()
+                val intent = Intent(holder.itemView.context, Transfer_activity::class.java)
+                intent.putExtra("strana_name", countries)
+                holder.itemView.context.startActivity(intent)
             }
         }
     }
+
+
 
 }

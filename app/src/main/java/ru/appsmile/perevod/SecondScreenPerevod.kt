@@ -6,8 +6,7 @@ import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import ru.appsmile.ItemData
-import ru.appsmile.adapter.country
-import ru.appsmile.adapter.trem
+import ru.appsmile.adapter.all_countries
 import ru.appsmile.first.R
 
 
@@ -17,7 +16,7 @@ class SecondScreenPerevod: AppCompatActivity() {
     private var poisk: SearchView? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.perevod2screen)
+        setContentView(R.layout.choose_country_activity)
 
         but = findViewById(R.id.strela)
         poisk = findViewById(R.id.yooh)
@@ -46,7 +45,7 @@ class SecondScreenPerevod: AppCompatActivity() {
                 val newList1 = spisok.filter {
                         it.strana.contains(newText!!, ignoreCase = true)
                 }
-                hope1?.adapter = trem(newList1)
+                hope1?.adapter = all_countries(newList1)
                 return true
             }
         })
@@ -54,7 +53,7 @@ class SecondScreenPerevod: AppCompatActivity() {
 
         hope1 = findViewById(R.id.fira)
         hope1?.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        hope1?.adapter = trem(spisok)
+        hope1?.adapter = all_countries(spisok)
 
 
 

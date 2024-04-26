@@ -1,34 +1,36 @@
 package ru.appsmile.perevod
 
-import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
-import android.widget.Button
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.google.android.material.card.MaterialCardView
 import ru.appsmile.ItemData
-import ru.appsmile.adapter.NumberAdapter1
-import ru.appsmile.adapter.Screen2
 import ru.appsmile.adapter.country
 import ru.appsmile.first.R
-import ru.appsmile.second.Figma
-import ru.appsmile.second.ManualActivity
-import java.io.Serializable
 
 
-class FirstSceenPerevod: AppCompatActivity() {
-    private  var buttoncol: AppCompatButton?  = null
+class MainActivity: AppCompatActivity() {
+    private var sharedPreferencesNumber: SharedPreferences? = null
+
+    private var buttoncol: AppCompatButton?  = null
     private var hope: RecyclerView? = null
+    private var material_card: MaterialCardView? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.perevod1screen)
+        setContentView(R.layout.main_activity)
 
+        sharedPreferencesNumber = getSharedPreferences("my_preferences", Context.MODE_PRIVATE)
         buttoncol = findViewById(R.id.colbut)
+        material_card = findViewById(R.id.mat_card_exit)
 
-        val spisok = listOf(
+        val spisok = listOf<ItemData>(
             ItemData(R.drawable.russia, "Россия"),
             ItemData(R.drawable.uzbekistan, "Узбекистан"),
             ItemData(R.drawable.tjk, "Таджикистан"),
@@ -41,8 +43,21 @@ class FirstSceenPerevod: AppCompatActivity() {
         buttoncol?.setOnClickListener {
             val intent = Intent(this, SecondScreenPerevod::class.java)
 
-            //intent.putExtra("list", spisok as Serializable)
+            //intent.putExtra("list", spisok.toTypedArray())
             startActivity(intent)
+        }
+
+        material_card?.setOnClickListener{
+            AlertDialog.Builder(this)
+                .setTitle("Вы действительно хотите выйти?")
+                .setMessage("При нажатии ОК все Ваши данные будут удалены безвозвратно")
+                .setNegativeButton("Отмена") { dialog, which ->
+                }
+                .setPositiveButton("ОК") { dialog, which ->
+                    sharedPreferencesNumber?.edit()?.remove("abonent_number")?.apply()
+                    finishAffinity()
+                }
+                .show()
         }
 
         hope = findViewById(R.id.groot)

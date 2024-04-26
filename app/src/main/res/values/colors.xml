@@ -3,9 +3,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="red">#FF0000</color>
-
+    <color name="checking">#EB8042</color>
+    <color name="notchecking">#E0E0E0</color>
+    <color name="number_color">#333333</color>
     <color name="gray">#BEBEBE</color>
-
+    <color name="serchVIEW">#1F767680</color>
+    <color name="colornumber">#61000000</color>
     <color name="card_text_color">#FFFFFF</color>
     <color name="title_text_color">#291C6D</color>
 </resources>
